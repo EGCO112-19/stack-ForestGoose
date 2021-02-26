@@ -20,8 +20,8 @@ int main(int argc,char** argv){
       if(c == '}' && pop(&s) != '{') break;
       if(c == ']' && pop(&s) != '[') break;
     }
-    if(j == strlen(argv[i]) && s.size == 0) printf("True\n");
-    else printf("False\n");
+    if(j == strlen(argv[i]) && s.size == 0) printf("The parentheses match for %s\n",argv[i]);
+    else printf("The parentheses do not match for %s\n",argv[i]);
     pop_all(&s);
   }
   return 0;
